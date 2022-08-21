@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,700;1,400;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+body{
+    background-color:pink;
+}
+
+.banner{
+    width: 100%;
+    padding: 9rem 3 rem;
+    text-align: center;
+    background: url(../images/Donas\ banner.jpg);
+    background-color: rgba(0,0,0,.3);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+.banner h1{
+    color: white;
+}
+
+.menu{
+    width: 100%;
+    height: 60px;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0px;
+}
+
+.menu__texto{
+    display: inline-block;
+    margin-inline: 51px ;
+    color: pink;
+}
+
+.menu__texto a{
+    color: pink;
+    text-decoration: none;
+}
+
+.menu__texto.active{
+    text-decoration: overline;
+}
+
+.menu__texto a:hover{
+    text-decoration: overline;
+}
+
+.donas{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "donas__carta1 donas__carta2"
+                         "donas__carta3 donas__carta4";
+    grid-gap: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.carta{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.donas__carta1{
+ grid-area:donas__carta1 ;
+}
+ 
+.donas__carta2{
+ grid-area:donas__carta2 ;
+}
+
+.donas__carta3{
+ grid-area:donas__carta3 ;
+}
+
+.donas__carta4{
+ grid-area:donas__carta4 ;
+}
+
+
+.donas__imagenes{
+    width: 600px ;
+    height: 600px;
+}
+
+.donas__div{
+    width: 600px;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.donas__titulo{
+    color: pink;
+    text-align: center;
+}
+
+.donas__parrafo{
+    font-size: 1rem;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+.foot{
+    color: white;
+}
+
+@media screen and (max-width:768px) {
+    .donas{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "donas__carta1 donas__carta2"
+                             "donas__carta3 donas__carta4";
+    }
+
+    .menu{
+        width: 1210px;
+    }
+    .foot{
+        text-align: center; 
+        margin-left: 400px;
+    }
+    .donas__imagenes{
+        width: 500px;
+        height: 500px;
+    }
+}
+
+
+@media screen and (max-width:380px){
+    .donas{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "donas__carta1"
+                             "donas__carta2"
+                             "donas__carta3"
+                             "donas__carta4";
+    }
+
+    .foot{
+        text-align: center; 
+        margin-left: 210px;
+    }
+
+    .menu{
+        width:600px ;
+    }
+
+    .foot{
+        text-align: center;
+        margin-left:50%;
+    }
+}
