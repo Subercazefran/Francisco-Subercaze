@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color:pink;
+    background: linear-gradient(90deg, rgba(158,54,227,1) 0%, rgba(194,18,178,1) 65%);
 }
 
 .banner{
@@ -34,8 +34,9 @@ body{
     align-items: center;
     padding: 0 5rem;
     box-sizing: border-box;
-    position: sticky;
+     /* position: sticky; se queda abajo de las imagenes */
     top: 0px;
+    
 }
 
 .menu__texto{
